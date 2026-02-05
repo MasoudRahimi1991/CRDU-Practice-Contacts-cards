@@ -1,141 +1,80 @@
-🇩🇪 README – Deutsch
-📌 Projektname
+# Contacts CRUD – API Practice
 
-Contacts CRUD – API Practice
+## 🇩🇪 Beschreibung
 
-📝 Beschreibung
-
-Dieses Projekt ist eine Übungsanwendung zur praktischen Umsetzung von CRUD-Funktionen (Create, Read, Update, Delete) mit HTML, CSS und JavaScript.
+Dieses Projekt ist eine einfache Übungsanwendung zur Implementierung von CRUD-Funktionen (Create, Read, Update, Delete) mit HTML, CSS und JavaScript.  
 Als Backend-Simulation wird die öffentliche API JSONPlaceholder verwendet.
 
-Ziel des Projekts ist es, grundlegende Konzepte der API-Integration, asynchronen Programmierung und dynamischen Datenverwaltung zu trainieren.
+Das Ziel ist es, grundlegende Konzepte der API-Integration, asynchronen Programmierung und dynamischen Datenverwaltung praktisch zu trainieren.
 
-🚀 Funktionen
+### Funktionen
 
-Mit der Anwendung können folgende Aktionen ausgeführt werden:
+Mit der Anwendung können folgende Aktionen durchgeführt werden:
 
-Kontakte von der API laden
+- Kontakte von der API laden  
+- Neue Kontakte erstellen  
+- Kontakte anzeigen und verwalten  
+- Kontakte löschen  
+- Liste leeren  
+- Suche nach Name, E-Mail oder Telefonnummer  
+- Verwaltung zusätzlicher Felder wie Telefon und Firma  
 
-Neue Kontakte erstellen
+### Verwendete Technologien
 
-Kontakte im Interface anzeigen
+- HTML  
+- CSS  
+- JavaScript (Vanilla JS)  
+- Fetch API  
+- JSONPlaceholder API  
 
-Kontakte löschen
+### Nutzung
 
-Lokale Liste leeren
+1. Repository herunterladen oder klonen  
+2. Datei `index.html` im Browser öffnen  
+3. Mit den Buttons „Load Contacts“, „Create“ und „Clear“ arbeiten  
 
-Nach Name, E-Mail oder Telefonnummer suchen
+Es ist kein zusätzlicher Server oder Framework erforderlich.
 
-Zusätzliche Felder wie Telefonnummer und Firma verwalten
+---
 
-🛠 Verwendete Technologien
+## 🇬🇧 Description
 
-HTML
-
-CSS
-
-JavaScript (Vanilla JS)
-
-Fetch API
-
-JSONPlaceholder API
-
-🎯 Lernziele
-
-Arbeiten mit REST-APIs
-
-Umgang mit Fetch und Promises
-
-DOM-Manipulation
-
-Formularvalidierung
-
-Dynamisches Rendern von Daten
-
-📂 Projektstruktur
-/project
- ├── index.html
- ├── style.css
- ├── script.js
- └── README.md
-
-⚙️ Installation und Nutzung
-
-Repository klonen oder Dateien herunterladen
-
-index.html im Browser öffnen
-
-Mit den Buttons „Load Contacts“, „Create“ und „Clear“ arbeiten
-
-Es wird kein Server oder Framework benötigt.
-
-🇬🇧 README – English
-📌 Project Name
-
-Contacts CRUD – API Practice
-
-📝 Description
-
-This project is a practice application for implementing basic CRUD functionality using HTML, CSS, and JavaScript.
+This project is a simple practice application for implementing CRUD functionality (Create, Read, Update, Delete) using HTML, CSS, and JavaScript.  
 It uses the public JSONPlaceholder API to simulate backend operations.
 
-The main goal is to practice API integration, asynchronous programming, and dynamic data handling in a simple and clear interface.
+The main goal is to practice API integration, asynchronous programming, and dynamic data handling in a practical way.
 
-🚀 Features
+### Features
 
-The application allows the user to:
+The application allows users to:
 
-Load contacts from an API
+- Load contacts from the API  
+- Create new contacts  
+- Display and manage contacts  
+- Delete contacts  
+- Clear the current list  
+- Search by name, email, or phone number  
+- Manage additional fields such as phone and company  
 
-Create new contacts
+### Technologies Used
 
-Display contact information dynamically
+- HTML  
+- CSS  
+- JavaScript (Vanilla JS)  
+- Fetch API  
+- JSONPlaceholder API  
 
-Delete contacts
+### How to Use
 
-Clear the current list
+1. Download or clone the repository  
+2. Open `index.html` in your browser  
+3. Use the buttons to load, create, search, or clear contacts  
 
-Search by name, email, or phone number
+No additional setup or server is required.
 
-Manage additional fields such as phone and company
+---
 
-🛠 Technologies Used
+### Project Purpose
 
-HTML
+This project was created purely for learning and practicing JavaScript API communication and CRUD logic without using frameworks.
 
-CSS
-
-JavaScript (Vanilla JS)
-
-Fetch API
-
-JSONPlaceholder API
-
-🎯 Learning Goals
-
-Understanding REST APIs
-
-Working with Fetch and Promises
-
-DOM manipulation
-
-Form validation
-
-Rendering dynamic data
-
-📂 Project Structure
-/project
- ├── index.html
- ├── style.css
- ├── script.js
- └── README.md
-
-⚙️ How to Use
-
-Clone the repository or download the files
-
-Open index.html in your browser
-
-Use the buttons to load, create, search, or clear contacts
-
-No additional setup or server is required
