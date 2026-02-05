@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacts CRUD (API Practice)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Contacts</h1>
+      <p class="muted">CRUD practice with JSONPlaceholder</p>
+    </header>
+
+    <section class="panel">
+      <div class="panel-top">
+        <div class="actions">
+          <button id="loadBtn" class="btn">Load Contacts</button>
+          <button id="clearBtn" class="btn btn-ghost">Clear</button>
+        </div>
+
+        <div class="search">
+          <input id="searchInput" type="text" placeholder="Search by name, email, phone..." />
+        </div>
+      </div>
+
+      <div id="status" class="status">Ready.</div>
+
+      <div class="grid">
+        <!-- FORM -->
+        <div class="card">
+          <div class="card-head">
+            <h2 id="formTitle">Add Contact</h2>
+            <span id="modeBadge" class="badge">CREATE</span>
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="nameInput">Full Name</label>
+              <input id="nameInput" type="text" placeholder="e.g., John Doe" />
+              <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="field">
+              <label for="emailInput">Email</label>
+              <input id="emailInput" type="email" placeholder="e.g., john@mail.com" />
+              <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="field">
+              <label for="phoneInput">Phone</label>
+              <input id="phoneInput" type="text" placeholder="e.g., +49 151 000000" />
+              <small class="error" id="phoneError"></small>
+            </div>
+
+            <div class="field">
+              <label for="companyInput">Company (optional)</label>
+              <input id="companyInput" type="text" placeholder="e.g., ACME GmbH" />
+            </div>
+
+            <div class="form-actions">
+              <button id="submitBtn" type="submit" class="btn btn-primary">Add</button>
+              <button id="cancelEditBtn" type="button" class="btn btn-ghost hidden">Cancel Edit</button>
+            </div>
+
+            <p class="muted small">
+              Tip: Load contacts first, then try Edit/Delete. Create will add to UI and call API.
+            </p>
+          </form>
+        </div>
+
+        <!-- LIST -->
+        <div class="card">
+          <div class="card-head">
+            <h2>List</h2>
+            <span class="badge badge-soft" id="countBadge">0</span>
+          </div>
+
+          <div id="list" class="list">
+            <!-- Contacts render here -->
+          </div>
+
+          <div class="muted small">
+            JSONPlaceholder endpoint: <code>/users</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer muted">
+      Built for practice. No frameworks.
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
