@@ -1,17 +1,11 @@
-// =====================================================
-// Contacts CRUD Practice with JSONPlaceholder API
-// API docs: https://jsonplaceholder.typicode.com/
-// We'll use: GET /users, POST /users, PUT /users/:id, DELETE /users/:id
-// =====================================================
 
-// -------------------- API --------------------
 const API_BASE = "https://jsonplaceholder.typicode.com";
 const USERS_ENDPOINT = `${API_BASE}/users`;
 
 // -------------------- STATE --------------------
-let contacts = [];       // UI state (array of contact objects)
-let editId = null;       // null => create mode, number => edit mode
-let loading = false;     // just for status messages
+let contacts = [];      
+let editId = null;       
+let loading = false;     
 
 // -------------------- DOM --------------------
 const loadBtn = document.getElementById("loadBtn");
@@ -63,7 +57,7 @@ listEl.addEventListener("click", (e) => {
 
 // -------------------- HELPERS --------------------
 function setStatus(message, type = "info") {
-  // type: info | ok | warn | error
+ 
   const prefix = type === "ok" ? "✅ " : type === "warn" ? "⚠️ " : type === "error" ? "❌ " : "ℹ️ ";
   statusEl.textContent = prefix + message;
 }
@@ -82,7 +76,7 @@ function resetErrors() {
 }
 
 function validateForm({ name, email, phone }) {
-  // Keep it simple but practical
+ 
   resetErrors();
   let ok = true;
 
@@ -229,13 +223,13 @@ async function loadContacts() {
 
     const data = await res.json();
 
-    // Map API users to our UI model
+ 
     contacts = data.map(u => ({
       id: u.id,
       name: u.name,
       email: u.email,
       phone: u.phone,
-      company: u.company // keep as object {name:...}
+      company: u.company 
     }));
 
     exitEditMode();
@@ -290,7 +284,7 @@ async function onSubmitForm(e) {
     return;
   }
 
-  // Build payload similar to JSONPlaceholder user shape
+  
   const payload = {
     name: formData.name,
     email: formData.email,
@@ -306,8 +300,7 @@ async function onSubmitForm(e) {
 
       const created = await createContact(payload);
 
-      // JSONPlaceholder returns an object, often with id=101 (but not guaranteed)
-      // We'll ensure we have a numeric id, else fallback to max+1 for UI.
+
       const nextId = Number(created.id) || (Math.max(0, ...contacts.map(c => c.id)) + 1);
 
       contacts.unshift({
@@ -327,7 +320,7 @@ async function onSubmitForm(e) {
 
       await updateContact(id, payload);
 
-      // Update UI state
+    
       contacts = contacts.map(c =>
         c.id === id
           ? { ...c, name: payload.name, email: payload.email, phone: payload.phone, company: payload.company }
@@ -358,10 +351,10 @@ async function deleteContact(id) {
 
     await deleteContactApi(id);
 
-    // Remove from UI state
+   
     contacts = contacts.filter(c => c.id !== id);
 
-    // If we were editing this one, exit edit mode
+   
     if (editId === id) exitEditMode();
 
     render();
@@ -373,5 +366,6 @@ async function deleteContact(id) {
   }
 }
 
-// Initial render
+
 render();
+
